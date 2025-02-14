@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform, useMotionValue, useMotionValueEvent, animate, cubicBezier } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import useProgressAnimation from "../hooks/useProgressAnimation";
 
 const RoadmapLine = () => {
   const [viewportHeight, setViewportHeight] = useState(0);
@@ -11,14 +12,14 @@ const RoadmapLine = () => {
     offset: ["start end", "end start"],
   });
 
-  useEffect(() => {
-    setViewportHeight(window.innerHeight);
+  // useEffect(() => {
+  //   setViewportHeight(window.innerHeight);
 
-    const handleResize = () => setViewportHeight(window.innerHeight);
-    window.addEventListener("resize", handleResize);
+  //   const handleResize = () => setViewportHeight(window.innerHeight);
+  //   window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
 
   // Normalisasi progress berdasarkan tinggi viewport
   const normalizedProgress = useTransform(scrollYProgress, (latest) => {
@@ -33,152 +34,7 @@ const RoadmapLine = () => {
     progress.set(latest);
   });
 
-  useEffect(() => {
-    progress.on("change", (val) => {
-      console.log(val)
-      if (val >= 0.193) {
-        animate(".q1circle", { scale: 1.5 }, { duration: 0.2, ease: "easeIn" })
-        animate(".q1text", { opacity: 1, y: -50 }, { duration: 0.2, ease: "easeIn" })
-      } else if (val < 0.193) {
-        animate(".q1circle", { scale: 1 }, { duration: 0.2, ease: "easeOut" })
-        animate(".q1text", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-      }
-      
-      if (val >= 0.226) {
-        animate(".q1smallcircle", { scale: 1.2 }, { duration: 0.2, ease: "easeIn" })
-        animate(".q1deschead", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
-        animate(".q1desc", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
-      } else if (val < 0.226) {
-        animate(".q1smallcircle", { scale: 1 }, { duration: 0.2, ease: "easeOut" })
-        animate(".q1deschead", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-        animate(".q1desc", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-      }
-
-      if (val >= 0.33) {
-        animate(".q1smallcircle2", { scale: 1.2 }, { duration: 0.2, ease: "easeIn" })
-        animate(".q1deschead2", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
-        animate(".q1desc2", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
-      } else if (val < 0.33) {
-        animate(".q1smallcircle2", { scale: 1 }, { duration: 0.2, ease: "easeOut" })
-        animate(".q1deschead2", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-        animate(".q1desc2", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-      }
-
-      if (val >= 0.36) {
-        animate(".q1smallcircle3", { scale: 1.2 }, { duration: 0.2, ease: "easeIn" })
-        animate(".q1deschead3", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
-        animate(".q1desc3", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
-      } else if (val < 0.36) {
-        animate(".q1smallcircle3", { scale: 1 }, { duration: 0.2, ease: "easeOut" })
-        animate(".q1deschead3", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-        animate(".q1desc3", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-      }
-
-      if (val >= 0.441) {
-        animate(".q2circle", { scale: 1.5 }, { duration: 0.2, ease: "easeIn" })
-        animate(".q2text", { opacity: 1, y: -50 }, { duration: 0.2, ease: "easeIn" })
-      } else if (val < 0.441) {
-        animate(".q2circle", { scale: 1 }, { duration: 0.2, ease: "easeOut" })
-        animate(".q2text", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-      }
-
-      if (val >= 0.459) {
-        animate(".q2smallcircle", { scale: 1.2, fill: '#3b82f6' }, { duration: 0.2, ease: "easeIn" })
-        animate(".q2deschead", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
-        animate(".q2desc", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
-      } else if (val < 0.459) {
-        animate(".q2smallcircle", { scale: 1, fill: '#6b7280' }, { duration: 0.2, ease: "easeOut" })
-        animate(".q2deschead", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-        animate(".q2desc", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-      }
-      
-      if (val >= 0.5019) {
-        animate(".q2smallcircle2", { scale: 1.2, fill: '#3b82f6' }, { duration: 0.2, ease: "easeIn" })
-        animate(".q2deschead2", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
-        animate(".q2desc2", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
-      } else if (val < 0.5019) {
-        animate(".q2smallcircle2", { scale: 1, fill: '#6b7280' }, { duration: 0.2, ease: "easeOut" })
-        animate(".q2deschead2", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-        animate(".q2desc2", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-      }
-
-      if (val >= 0.5245) {
-        animate(".q2smallcircle3", { scale: 1.2, fill: '#3b82f6' }, { duration: 0.2, ease: "easeIn" })
-        animate(".q2deschead3", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
-        animate(".q2desc3", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
-      } else if (val < 0.5245) {
-        animate(".q2smallcircle3", { scale: 1, fill: '#6b7280' }, { duration: 0.2, ease: "easeOut" })
-        animate(".q2deschead3", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-        animate(".q2desc3", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-      }
-      
-      if (val >= 0.5928) {
-        animate(".q3smallcircle", { scale: 1.2, fill: '#3b82f6' }, { duration: 0.2, ease: "easeIn" })
-        animate(".q3deschead", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
-        animate(".q3desc", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
-      } else if (val < 0.5928) {
-        animate(".q3smallcircle", { scale: 1, fill: '#6b7280' }, { duration: 0.2, ease: "easeOut" })
-        animate(".q3deschead", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-        animate(".q3desc", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-      }
-
-      if (val >= 0.6255) {
-        animate(".q3smallcircle2", { scale: 1.2, fill: '#3b82f6' }, { duration: 0.2, ease: "easeIn" })
-        animate(".q3deschead2", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
-        animate(".q3desc2", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
-      } else if (val < 0.6255) {
-        animate(".q3smallcircle2", { scale: 1, fill: '#6b7280' }, { duration: 0.2, ease: "easeOut" })
-        animate(".q3deschead2", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-        animate(".q3desc2", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-      }
-      
-      if (val >= 0.6859) {
-        animate(".q3smallcircle3", { scale: 1.2, fill: '#3b82f6' }, { duration: 0.2, ease: "easeIn" })
-        animate(".q3deschead3", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
-        animate(".q3desc3", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
-      } else if (val < 0.6859) {
-        animate(".q3smallcircle3", { scale: 1, fill: '#6b7280' }, { duration: 0.2, ease: "easeOut" })
-        animate(".q3deschead3", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-        animate(".q3desc3", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-      }
-      
-      if (val >= 0.7558) {
-        animate(".q4smallcircle", { scale: 1.2, fill: '#3b82f6' }, { duration: 0.2, ease: "easeIn" })
-        animate(".q4deschead", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
-        animate(".q4desc", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
-      } else if (val < 0.7558) {
-        animate(".q4smallcircle", { scale: 1, fill: '#6b7280' }, { duration: 0.2, ease: "easeOut" })
-        animate(".q4deschead", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-        animate(".q4desc", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-      }
-      
-      if (val >= 0.7855) {
-        animate(".q4smallcircle2", { scale: 1.2, fill: '#3b82f6' }, { duration: 0.2, ease: "easeIn" })
-        animate(".q4deschead2", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
-        animate(".q4desc2", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
-      } else if (val < 0.7855) {
-        animate(".q4smallcircle2", { scale: 1, fill: '#6b7280' }, { duration: 0.2, ease: "easeOut" })
-        animate(".q4deschead2", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-        animate(".q4desc2", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-      }
-
-      if (val >= 0.5794) {
-        animate(".q3circle", { scale: 1.5 }, { duration: 0.2, ease: "easeIn" })
-        animate(".q3text", { opacity: 1, y: -50 }, { duration: 0.2, ease: "easeIn" })
-      } else if (val < 0.5794) {
-        animate(".q3circle", { scale: 1 }, { duration: 0.2, ease: "easeOut" })
-        animate(".q3text", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-      }
-
-      if (val >= 0.718) {
-        animate(".q4circle", { scale: 1.5 }, { duration: 0.2, ease: "easeIn" })
-        animate(".q4text", { opacity: 1, y: -50 }, { duration: 0.2, ease: "easeIn" })
-      } else if (val < 0.718) {
-        animate(".q4circle", { scale: 1 }, { duration: 0.2, ease: "easeOut" })
-        animate(".q4text", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-      }
-    })
-  }, [])
+  useProgressAnimation(scrollYProgress)
 
   // Animasi horizontal roadmap (geser ke kanan saat scroll ke bawah)
   const translateX = useTransform(progress, [0, 1], ["-10vw", "-600vw"]);
