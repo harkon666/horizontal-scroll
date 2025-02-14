@@ -1,5 +1,4 @@
 import RoadmapLine from "@/app/components/RoadmapLine";
-import HorizontalScroll from "@/app/components/HorizontalScroll";
 
 export default function Page() {
   return (
