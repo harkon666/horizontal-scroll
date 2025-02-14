@@ -111,31 +111,72 @@ const RoadmapLine = () => {
         animate(".q2deschead3", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
         animate(".q2desc3", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
       }
+      
+      if (val >= 0.5928) {
+        animate(".q3smallcircle", { scale: 1.2, fill: '#3b82f6' }, { duration: 0.2, ease: "easeIn" })
+        animate(".q3deschead", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
+        animate(".q3desc", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
+      } else if (val < 0.5928) {
+        animate(".q3smallcircle", { scale: 1, fill: '#6b7280' }, { duration: 0.2, ease: "easeOut" })
+        animate(".q3deschead", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
+        animate(".q3desc", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
+      }
 
-      // if (val >= 0.44) {
-      //   animate(".q3circle", { scale: 1.5 }, { duration: 0.2, ease: "easeIn" })
-      //   animate(".q3text", { opacity: 1, y: -50 }, { duration: 0.2, ease: "easeIn" })
-      // } else if (val < 0.44) {
-      //   animate(".q3circle", { scale: 1 }, { duration: 0.2, ease: "easeOut" })
-      //   animate(".q3text", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-      // }
+      if (val >= 0.6255) {
+        animate(".q3smallcircle2", { scale: 1.2, fill: '#3b82f6' }, { duration: 0.2, ease: "easeIn" })
+        animate(".q3deschead2", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
+        animate(".q3desc2", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
+      } else if (val < 0.6255) {
+        animate(".q3smallcircle2", { scale: 1, fill: '#6b7280' }, { duration: 0.2, ease: "easeOut" })
+        animate(".q3deschead2", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
+        animate(".q3desc2", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
+      }
       
-      // if (val >= 0.482) {
-      //   animate(".q3smallcircle", { scale: 1.5 }, { duration: 0.2, ease: "easeIn" })
-      //   animate(".q3desc", { opacity: 1, y: -50 }, { duration: 0.2, ease: "easeIn" })
-      // } else if (val < 0.482) {
-      //   animate(".q3smallcircle", { scale: 1 }, { duration: 0.2, ease: "easeOut" })
-      //   animate(".q3desc", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-      // }
+      if (val >= 0.6859) {
+        animate(".q3smallcircle3", { scale: 1.2, fill: '#3b82f6' }, { duration: 0.2, ease: "easeIn" })
+        animate(".q3deschead3", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
+        animate(".q3desc3", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
+      } else if (val < 0.6859) {
+        animate(".q3smallcircle3", { scale: 1, fill: '#6b7280' }, { duration: 0.2, ease: "easeOut" })
+        animate(".q3deschead3", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
+        animate(".q3desc3", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
+      }
       
+      if (val >= 0.7558) {
+        animate(".q4smallcircle", { scale: 1.2, fill: '#3b82f6' }, { duration: 0.2, ease: "easeIn" })
+        animate(".q4deschead", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
+        animate(".q4desc", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
+      } else if (val < 0.7558) {
+        animate(".q4smallcircle", { scale: 1, fill: '#6b7280' }, { duration: 0.2, ease: "easeOut" })
+        animate(".q4deschead", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
+        animate(".q4desc", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
+      }
       
-      // if (val >= 0.66) {
-      //   animate(".q4circle", { scale: 1.5 }, { duration: 0.2, ease: "easeIn" })
-      //   animate(".q4text", { opacity: 1, y: -50 }, { duration: 0.2, ease: "easeIn" })
-      // } else if (val < 0.66) {
-      //   animate(".q4circle", { scale: 1 }, { duration: 0.2, ease: "easeOut" })
-      //   animate(".q4text", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
-      // }
+      if (val >= 0.7855) {
+        animate(".q4smallcircle2", { scale: 1.2, fill: '#3b82f6' }, { duration: 0.2, ease: "easeIn" })
+        animate(".q4deschead2", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
+        animate(".q4desc2", { opacity: 1, y: 0 }, { duration: 0.2, ease: "easeIn" })
+      } else if (val < 0.7855) {
+        animate(".q4smallcircle2", { scale: 1, fill: '#6b7280' }, { duration: 0.2, ease: "easeOut" })
+        animate(".q4deschead2", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
+        animate(".q4desc2", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
+      }
+
+      if (val >= 0.5794) {
+        animate(".q3circle", { scale: 1.5 }, { duration: 0.2, ease: "easeIn" })
+        animate(".q3text", { opacity: 1, y: -50 }, { duration: 0.2, ease: "easeIn" })
+      } else if (val < 0.5794) {
+        animate(".q3circle", { scale: 1 }, { duration: 0.2, ease: "easeOut" })
+        animate(".q3text", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
+      }
+
+      if (val >= 0.718) {
+        animate(".q4circle", { scale: 1.5 }, { duration: 0.2, ease: "easeIn" })
+        animate(".q4text", { opacity: 1, y: -50 }, { duration: 0.2, ease: "easeIn" })
+      } else if (val < 0.718) {
+        animate(".q4circle", { scale: 1 }, { duration: 0.2, ease: "easeOut" })
+        animate(".q4text", { opacity: 0, y: 0 }, { duration: 0.2, ease: "easeOut" })
+      }
     })
   }, [])
 
@@ -150,15 +191,12 @@ const RoadmapLine = () => {
   // Animasi warna teks berdasarkan progress scroll
   const q1Color = useTransform(progress, (latest) => (latest >= 0.193 ? "#3b82f6" : "#6b7280"));
   const q2Color = useTransform(progress, (latest) => (latest >= 0.441 ? "#3b82f6" : "#6b7280"));
-  const q3Color = useTransform(progress, (latest) => (latest >= 0.44 ? "#3b82f6" : "#6b7280"));
-  const q4Color = useTransform(progress, (latest) => (latest >= 0.66 ? "#3b82f6" : "#6b7280"));
+  const q3Color = useTransform(progress, (latest) => (latest >= 0.5794 ? "#3b82f6" : "#6b7280"));
+  const q4Color = useTransform(progress, (latest) => (latest >= 0.718 ? "#3b82f6" : "#6b7280"));
   
   const q1smallcircle = useTransform(progress, (latest) => (latest >= 0.226 ? "#3b82f6" : "#6b7280"));
   const q1smallcircle2 = useTransform(progress, (latest) => (latest >= 0.335 ? "#3b82f6" : "#6b7280"));
   const q1smallcircle3 = useTransform(progress, (latest) => (latest >= 0.36 ? "#3b82f6" : "#6b7280"));
-  
-  const q2smallcircle = useTransform(progress, (latest) => (latest >= 0.262 ? "#3b82f6" : "#6b7280"));
-  const q3smallcircle = useTransform(progress, (latest) => (latest >= 0.482 ? "#3b82f6" : "#6b7280"));
 
   const q1line = useTransform(progress, (latest) => (latest >=  0.198 ? 550 : 420 ))
   const q1line2 = useTransform(progress, (latest) => (latest >=  0.33 ? 250 : 380 ))
@@ -168,6 +206,12 @@ const RoadmapLine = () => {
   const q2line2 = useTransform(progress, (latest) => (latest >=  0.5019 ? 250 : 380 ))
   const q2line3 = useTransform(progress, (latest) => (latest >=  0.5245 ? 600 : 470 ))
 
+  const q3line = useTransform(progress, (latest) => (latest >=  0.5928 ? 600 : 470 ))
+  const q3line2 = useTransform(progress, (latest) => (latest >=  0.6255 ? 800 : 670 ))
+  const q3line3 = useTransform(progress, (latest) => (latest >=  0.6859 ? 600 : 470 ))
+  
+  const q4line = useTransform(progress, (latest) => (latest >=  0.7558 ? 250 : 380 ))
+  const q4line2 = useTransform(progress, (latest) => (latest >=  0.7855 ? 7000 : 6600 ))
   return (
     <div ref={ref} className="relative h-[600vh] flex flex-col items-center">
       <svg
@@ -493,22 +537,22 @@ const RoadmapLine = () => {
             <motion.line x1="3000" y1="470" x2="3000" y2={q2line3} stroke="rgb(59, 130, 246)" strokeWidth="2" strokeDasharray="10 10" />
 
             <motion.circle
-              className="q2circle"
+              className="q3circle"
               cx="3800"
               cy="400"
               r="10"
-              style={{ fill: q2Color }}
+              style={{ fill: q3Color }}
             />
             <motion.text
-              className="q2text"
+              className="q3text"
               x="3800" y="370" fontSize="36"
-              style={{ fill: q2Color, fontWeight: 'bold' }}
+              style={{ fill: q3Color, fontWeight: 'bold' }}
               opacity={0}
             >
               Phase 2
             </motion.text>
             <motion.text
-              className="q2text"
+              className="q3text"
               x="3800" y="400" fontSize="24"
               style={{ fill: 'white', fontWeight: 'semibold' }}
               opacity={0}
@@ -517,14 +561,13 @@ const RoadmapLine = () => {
             </motion.text>
 
             <motion.circle
-              className="q2smallcircl3"
+              className="q3smallcircle"
               cx="4000"
               cy="450"
               r="10"
-              style={{ fill: q1smallcircle3 }}
             />
             <motion.text
-              className="q2deschead3"
+              className="q3deschead"
               x="4010"
               y="530"
               fontSize="36"
@@ -534,7 +577,7 @@ const RoadmapLine = () => {
               Group Project Setiap Minggu
             </motion.text>
             <motion.text
-              className="q2desc3"
+              className="q3desc"
               x="4010"
               y="570"
               fontSize="24"
@@ -543,7 +586,7 @@ const RoadmapLine = () => {
               Menyelesaikan project bersama teman seperjuanganmu
             </motion.text>
             <motion.text
-              className="q2desc3"
+              className="q3desc"
               x="4010"
               y="600"
               fontSize="24"
@@ -551,17 +594,16 @@ const RoadmapLine = () => {
             >
               namun kali ini setiap minggu sekali dan totalnya 5x group project
             </motion.text>
-            <motion.line x1="4000" y1="470" x2="4000" y2={q1line3} stroke="rgb(59, 130, 246)" strokeWidth="2" strokeDasharray="10 10" />
+            <motion.line x1="4000" y1="470" x2="4000" y2={q3line} stroke="rgb(59, 130, 246)" strokeWidth="2" strokeDasharray="10 10" />
 
             <motion.circle
-              className="q2smallcircl3"
+              className="q3smallcircle2"
               cx="4500"
               cy="650"
               r="10"
-              style={{ fill: q1smallcircle3 }}
             />
             <motion.text
-              className="q2deschead3"
+              className="q3deschead2"
               x="4510"
               y="730"
               fontSize="36"
@@ -571,7 +613,7 @@ const RoadmapLine = () => {
               Final Group Project
             </motion.text>
             <motion.text
-              className="q2desc3"
+              className="q3desc2"
               x="4510"
               y="770"
               fontSize="24"
@@ -580,7 +622,7 @@ const RoadmapLine = () => {
               Multiplayer Games mungkin sulit, namun
             </motion.text>
             <motion.text
-              className="q2desc3"
+              className="q3desc2"
               x="4510"
               y="800"
               fontSize="24"
@@ -588,17 +630,16 @@ const RoadmapLine = () => {
             >
               bila lulus portfolio mu sudah sangat keren
             </motion.text>
-            <motion.line x1="4500" y1="670" x2="4500" y2={800} stroke="rgb(59, 130, 246)" strokeWidth="2" strokeDasharray="10 10" />
+            <motion.line x1="4500" y1="670" x2="4500" y2={q3line2} stroke="rgb(59, 130, 246)" strokeWidth="2" strokeDasharray="10 10" />
 
             <motion.circle
-              className="q2smallcircl3"
+              className="q3smallcircle3"
               cx="5500"
               cy="450"
               r="10"
-              style={{ fill: q1smallcircle3 }}
             />
             <motion.text
-              className="q2deschead3"
+              className="q3deschead3"
               x="5510"
               y="530"
               fontSize="36"
@@ -608,7 +649,7 @@ const RoadmapLine = () => {
               Sudah Siap Untuk kerja
             </motion.text>
             <motion.text
-              className="q2desc3"
+              className="q3desc3"
               x="5510"
               y="570"
               fontSize="24"
@@ -617,7 +658,7 @@ const RoadmapLine = () => {
               Selamat karena sudah berjuang dan sabar dalam belajar
             </motion.text>
             <motion.text
-              className="q2desc3"
+              className="q3desc3"
               x="5510"
               y="600"
               fontSize="24"
@@ -625,25 +666,25 @@ const RoadmapLine = () => {
             >
               Kamu sudah menguasai skill Fullstack Developer
             </motion.text>
-            <motion.line x1="5500" y1="470" x2="5500" y2={600} stroke="rgb(59, 130, 246)" strokeWidth="2" strokeDasharray="10 10" />
+            <motion.line x1="5500" y1="470" x2="5500" y2={q3line3} stroke="rgb(59, 130, 246)" strokeWidth="2" strokeDasharray="10 10" />
 
             <motion.circle
-              className="q2circle"
+              className="q4circle"
               cx="6000"
               cy="400"
               r="10"
-              style={{ fill: q2Color }}
+              style={{ fill: q4Color }}
             />
             <motion.text
-              className="q2text"
+              className="q4text"
               x="6000" y="370" fontSize="36"
-              style={{ fill: q2Color, fontWeight: 'bold' }}
+              style={{ fill: q4Color, fontWeight: 'bold' }}
               opacity={0}
             >
               Phase 3
             </motion.text>
             <motion.text
-              className="q2text"
+              className="q4text"
               x="6000" y="400" fontSize="24"
               style={{ fill: 'white', fontWeight: 'semibold' }}
               opacity={0}
@@ -652,14 +693,13 @@ const RoadmapLine = () => {
             </motion.text>
 
             <motion.circle
-              className="q2smallcircle2"
+              className="q4smallcircle"
               cx="6500"
               cy="400"
               r="10"
-              style={{ fill: q1smallcircle3 }}
             />
             <motion.text
-              className="q2deschead2"
+              className="q4deschead"
               x="6510"
               y="280"
               fontSize="36"
@@ -669,7 +709,7 @@ const RoadmapLine = () => {
               Oops! Phase 3 belum tersedia :(
             </motion.text>
             <motion.text
-              className="q2desc2"
+              className="q4desc"
               x="6510"
               y="320"
               fontSize="24"
@@ -678,7 +718,7 @@ const RoadmapLine = () => {
               Kami masih meneliti apa saja kurikulum materi yang diperlukan
             </motion.text>
             <motion.text
-              className="q2desc2"
+              className="q4desc"
               x="6510"
               y="350"
               fontSize="24"
@@ -686,17 +726,17 @@ const RoadmapLine = () => {
             >
               untuk phase 3 agar cocok untuk orang Indonesia yang ingin menjadi web 3 developer
             </motion.text>
-            <motion.line x1="6500" y1="380" x2="6500" y2="250" stroke="rgb(59, 130, 246)" strokeWidth="2" strokeDasharray="10 10" />
+            <motion.line x1="6500" y1="380" x2="6500" y2={q4line} stroke="rgb(59, 130, 246)" strokeWidth="2" strokeDasharray="10 10" />
+
 
             <motion.circle
-              className="q2smallcircle2"
+              className="q4smallcircle2"
               cx="6600"
               cy="700"
               r="10"
-              style={{ fill: q1smallcircle3 }}
             />
             <motion.text
-              className="q2deschead2"
+              className="q4deschead2"
               x="6720"
               y="740"
               fontSize="36"
@@ -706,7 +746,7 @@ const RoadmapLine = () => {
               Cooming Soon!
             </motion.text>
             <motion.text
-              className="q2desc2"
+              className="q4desc2"
               x="6720"
               y="780"
               fontSize="24"
@@ -714,7 +754,18 @@ const RoadmapLine = () => {
             >
               Stay tune di Randome Para Nolep
             </motion.text>
-            <motion.line x1="6600" y1="700" x2="7000" y2="700" stroke="rgb(59, 130, 246)" strokeWidth="2" strokeDasharray="10 10" />
+            <motion.text
+              onClick={() => { window.open('https://discord.gg/ufbRBRTKN8', '_blank')}}
+              className="q4desc2"
+              x="6720"
+              y="810"
+              fontSize="24"
+              fill="#3b82f6"
+              style={{ cursor: 'pointer', textDecoration: 'underline'}}
+            >
+              Join discordnya sekarang 😈
+            </motion.text>
+            <motion.line x1="6600" y1="700" x2={q4line2} y2="700" stroke="rgb(59, 130, 246)" strokeWidth="2" strokeDasharray="10 10" />
 
           </svg>
         </motion.div>
